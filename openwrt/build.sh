@@ -37,7 +37,7 @@ fi
 
 # github actions - automatically retrieve `github raw` links
 if [ "$(whoami)" = "runner" ] && [ -n "$GITHUB_REPO" ]; then
-    export mirror=raw.githubusercontent.com/$GITHUB_REPO/master
+    export mirror=raw.githubusercontent.com/$GITHUB_REPO/openwrt-23.05
 fi
 
 # private gitea

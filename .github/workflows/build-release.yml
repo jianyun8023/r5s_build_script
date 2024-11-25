@@ -74,7 +74,7 @@ jobs:
       run: |
         export GITHUB_REPO=${{ github.repository }}
         export ${{ github.event.inputs.build_options }}
-        bash <(curl -sS https://raw.githubusercontent.com/${{ github.repository }}/master/openwrt/build.sh) ${{ env.build_version }} ${{ github.event.inputs.device }}
+        bash <(curl -sS https://raw.githubusercontent.com/${{ github.repository }}/openwrt-23.05/openwrt/build.sh) ${{ env.build_version }} ${{ github.event.inputs.device }}
         cd openwrt
         if [ "${{ github.event.inputs.version }}" = release ]; then
           tags=OpenWrt-$(git describe --abbrev=0 --tags)
